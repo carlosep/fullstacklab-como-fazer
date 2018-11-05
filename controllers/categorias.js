@@ -8,9 +8,9 @@ const nova = async (req, res) => {
     api.create('categorias', {
         categoria: req.body.categoria
     })
+    console.log(req.body.categoria)
     res.redirect('/categorias')
 }
-
 
 const list = async (req, res) => {
     const categorias = await api.list('categorias')
@@ -37,7 +37,6 @@ const editar = async (req, res) => {
     })
     res.redirect('/categorias')
 }
-
 
 module.exports = {
     novaForm,

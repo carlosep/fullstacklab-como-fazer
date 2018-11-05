@@ -9,8 +9,6 @@ app.use(bodyParser.urlencoded())
 const port = process.env.PORT || 3000
 
 app.get('/', async (request, response) => {
-    const content = await axios.get('https://como-fazer-262a0.firebaseio.com/Teste.json')
-    console.log(content.data)
     response.render('index')
 })
 
